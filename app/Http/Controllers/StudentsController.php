@@ -13,6 +13,10 @@ class StudentsController extends Controller
     }
     public function tambah(Request $request)
     {
+      $this->validate($request, [
+          'name' => 'required',
+          'email' => 'required'
+      ]);
       $students = new Students;
       $students->name = $request->name;
       $students->email = $request->email;
@@ -30,6 +34,10 @@ class StudentsController extends Controller
     }
     public function edit_post(Request $request)
     {
+      $this->validate($request, [
+          'name' => 'required',
+          'email' => 'required'
+      ]);
       $students = Students::find($request->id);
 
       $students->name = $request->name;
@@ -40,6 +48,12 @@ class StudentsController extends Controller
       $students->gender = $request->gender;
       $students->active = $request->active;
       $students->save();
+      return redirect('/students');
+    }
+    public function delete_students($id)
+    {
+      $students = Students::find($id);
+      $students->forceDelete();
       return redirect('/students');
     }
 }

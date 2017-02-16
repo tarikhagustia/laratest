@@ -58,7 +58,7 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="">
+                                        <a href="/students">
                                             List
                                         </a>
                                     </li>
@@ -69,7 +69,7 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="">
+                                        <a href="/instructors">
                                             instructors list
                                         </a>
                                     </li>
@@ -80,7 +80,7 @@
                                 </a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>
-                                        <a href="">
+                                        <a href="/course">
                                           Course list
                                         </a>
                                     </li>

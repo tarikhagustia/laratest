@@ -5,33 +5,31 @@
     <div class="row">
         <div class="col-md-12">
             <div class="panel panel-default">
-                <div class="panel-heading">Studens</div>
+                <div class="panel-heading">Instructors</div>
 
                 <div class="panel-body">
-                    <a href="/students/add" class="btn btn-primary">Add new</a>
+                    <a href="/instructors/add" class="btn btn-primary">Add new</a>
                     <div class="table-responsive">
                       <table class="table table-striped">
                         <thead>
                           <tr>
                             <th>No</th>
                             <th>Name</th>
-                            <th>E-mail</th>
                             <th>Gender</th>
                             <th>Date Input</th>
                           </tr>
                         </thead>
                         <tbody>
-                          @foreach($students as $key => $student)
+                          @foreach($instructors as $key => $instructor)
                           <tr>
                             <td>{{ $key+1 }}</td>
-                            <td>{{ $student->name }}</td>
-                            <td>{{ $student->email }}</td>
-                            <td>{{ $student->gender }}</td>
-                            <td>{{ $student->created_at }}</td>
+                            <td>{{ $instructor->name }}</td>
+                            <td>{{ $instructor->gender }}</td>
+                            <td>{{ $instructor->created_at }}</td>
                             <td>
-                              <a href="/students/edit/{{ $student->id }}">EDIT</a>
+                              <a href="/instructors/edit/{{ $instructor->id }}">EDIT</a>
                               |
-                              <a href="/students/delete/{{ $student->id }}">DELETE</a>
+                              <a href="/instructors/delete/{{ $instructor->id }}">DELETE</a>
                             </td>
                           </tr>
                           @endforeach

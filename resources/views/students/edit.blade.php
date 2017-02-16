@@ -8,7 +8,15 @@
                 <div class="panel-heading">Studens</div>
 
                 <div class="panel-body">
-
+                    @if (count($errors) > 0)
+                      <div class="alert alert-danger">
+                          <ul>
+                              @foreach ($errors->all() as $error)
+                                  <li>{{ $error }}</li>
+                              @endforeach
+                          </ul>
+                      </div>
+                    @endif
                     <form class="" action="/students/edit" method="post">
                       {{ csrf_field() }}
                       <input type="hidden" name="id" value="{{ $students->id }}">
